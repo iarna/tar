@@ -1,0 +1,41 @@
+{
+  "name": "@iarna/tar",
+  "version": "1.0.0",
+  "description": "A simple tar CLI based on node-tar -- highly compatible, very fast, can produce idempotent tar outputs when using \"portable\" mode.\n\nIntended for use in environments without a tar binary (ie, Windows), particularly for portable package.json run scripts.",
+  "bin": {
+    "tar": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version -s",
+    "postrelease": "npm publish && git push --follow-tags",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+  },
+  "keywords": [],
+  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "license": "ISC",
+  "devDependencies": {
+    "weallbehave": "*",
+    "weallcontribute": "*",
+    "standard-version": "*",
+    "tap": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iarna/iarna-tar.git"
+  },
+  "files": [
+    "index.js",
+    "commands/create.js",
+    "commands/extract.js",
+    "commands/list.js"
+  ],
+  "bugs": "https://github.com/iarna/iarna-tar/issues",
+  "homepage": "https://npmjs.com/package/@iarna/tar",
+  "dependencies": {
+    "@iarna/cli": "^2.1.0",
+    "tar": "^6.1.0",
+    "yargs": "^17.0.1"
+  }
+}
