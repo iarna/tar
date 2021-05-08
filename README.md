@@ -57,7 +57,7 @@ GNU tar.
 
 ### npx @iarna/tar@1 create [options] <files...>
 
-```
+```console
 Create a tarball archive.
 
 The files are a list of paths to add to the tarball. Adding a directory also
