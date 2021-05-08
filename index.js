@@ -6,8 +6,6 @@ const yargs = require('@iarna/cli')(main)
     .demandCommand()
     .help()
 
-/* eslint-disable node/no-unsupported-features */
-
 async function main (opts) {
     if (!opts.command) {
         yargs.showHelp()
