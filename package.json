@@ -1,6 +1,6 @@
 {
   "name": "@iarna/tar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tar CLI based on node-tar -- highly compatible, very fast, can produce idempotent tar outputs when using \"portable\" mode.\n\nIntended for use in environments without a tar binary (ie, Windows), particularly for portable package.json run scripts.",
   "bin": {
     "tar": "index.js"
