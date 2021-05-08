@@ -63,15 +63,12 @@ async function main (opts) {
     } else if (opts.command === 'list') {
         tarOpts = {
             ...tarOpts,
-            sync: false,
             onentry: entry => {
                 console.log(entry.path)
             }
         }
         if (opts.file) {
-            tar.t(tarOpts, opts.files, () => {
-                console.log(opts, opts.files)
-            })
+            tar.t(tarOpts, opts.files)
         } else {
             const input = tar.t(tarOpts, opts.files)
             process.stdin.pipe(input)
